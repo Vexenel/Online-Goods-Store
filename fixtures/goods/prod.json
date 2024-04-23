@@ -1,0 +1,86 @@
+[
+    {
+        "model": "goods.products",
+        "pk": 1,
+        "fields": {
+            "name": "Игровой набор Defender Target MKP-350",
+            "slug": "igrovoj-nabor-defender-target-mkp-350",
+            "discription": "product main image\r\nпроводной, наушники 2.0, клавиатура мембранная, мышь оптическая светодиодная, коврик маленький",
+            "image": "",
+            "price": "120.00",
+            "discount": "0.00",
+            "quantity": 11,
+            "category": 11
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 2,
+        "fields": {
+            "name": "Монитор ASUS TUF Gaming",
+            "slug": "monitor-asus-tuf-gaming",
+            "discription": "Игровой монитор ASUS TUF Gaming VG27AQ1A основан на IPS-панели с частотой обновления 170 Гц.",
+            "image": "",
+            "price": "340.00",
+            "discount": "0.00",
+            "quantity": 8,
+            "category": 9
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 3,
+        "fields": {
+            "name": "Кресло офисное Aceline",
+            "slug": "kreslo-ofisnoe-aceline",
+            "discription": "Кресло офисное Aceline ACCT B обладает обивкой из текстиля и пропускающей воздух сетки.",
+            "image": "",
+            "price": "70.00",
+            "discount": "0.00",
+            "quantity": 15,
+            "category": 12
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 4,
+        "fields": {
+            "name": "Чайник для плиты Tefal",
+            "slug": "chajnik-dlya-plity-tefal",
+            "discription": "Чайник для плиты Tefal C7921024 позволит организовать чаепитие и порадовать себя и близких вкусным чаем.",
+            "image": "",
+            "price": "30.00",
+            "discount": "0.00",
+            "quantity": 5,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 5,
+        "fields": {
+            "name": "Смартфон Xiaomi Redmi Note 12",
+            "slug": "smartfon-xiaomi-redmi-note-12",
+            "discription": "На 6.67-дюймовом экране смартфона Xiaomi Redmi Note 12 удобно просматривать информацию даже под прямыми солнечными лучами благодаря пиковой яркости 1200 нит и ее плавной регулировке для защиты зрения.",
+            "image": "",
+            "price": "210.00",
+            "discount": "0.00",
+            "quantity": 17,
+            "category": 8
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 6,
+        "fields": {
+            "name": "Ноутбук MSI Katana",
+            "slug": "noutbuk-msi-katana",
+            "discription": "Ноутбук MSI Katana GF76 B12UCR-821XRU предлагает компьютерным энтузиастам высокую скорость и производительность при работе в ресурсоемких программах, запуске игр и графического контента.",
+            "image": "",
+            "price": "340.00",
+            "discount": "0.00",
+            "quantity": 13,
+            "category": 10
+        }
+    }
+]

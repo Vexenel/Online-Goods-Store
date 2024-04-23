@@ -2,10 +2,16 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.defaultfilters import first
 
+from goods.models import Categories
+
 def index(request):
+
+    categories = Categories.objects.all()
+
     context: dict = {
         'title': 'Home - Главная' ,
-        'content': 'Интернет-магазина бытовой техники'
+        'content': 'Интернет-магазина бытовой техники',
+        'categories': categories
     }
 
     return render(request, 'main/index.html', context)

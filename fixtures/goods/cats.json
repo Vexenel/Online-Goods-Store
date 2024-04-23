@@ -1,0 +1,58 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 6,
+        "fields": {
+            "name": "Все товары",
+            "slug": "all"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 7,
+        "fields": {
+            "name": "Товары для кухни",
+            "slug": "tovary-dlya-kuhni"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 8,
+        "fields": {
+            "name": "Смартфоны и гаджеты",
+            "slug": "smartfony-i-gadzhety"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 9,
+        "fields": {
+            "name": "ТВ и консоли",
+            "slug": "tv-i-konsoli"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 10,
+        "fields": {
+            "name": "ПК и ноутбуки",
+            "slug": "pk-i-noutbuki"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 11,
+        "fields": {
+            "name": "Переферия",
+            "slug": "pereferiya"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 12,
+        "fields": {
+            "name": "Офисная мебель",
+            "slug": "ofisnaya-mebel"
+        }
+    }
+]
