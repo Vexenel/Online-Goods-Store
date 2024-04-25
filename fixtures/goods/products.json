@@ -5,10 +5,10 @@
         "fields": {
             "name": "Игровой набор Defender Target MKP-350",
             "slug": "igrovoj-nabor-defender-target-mkp-350",
-            "description": "product main image\r\nпроводной, наушники 2.0, клавиатура мембранная, мышь оптическая светодиодная, коврик маленький",
-            "image": "",
+            "description": "проводной, наушники 2.0, клавиатура мембранная, мышь оптическая светодиодная, коврик маленький",
+            "image": "goods_images/Defender-Xenda-fb.png",
             "price": "120.00",
-            "discount": "0.00",
+            "discount": "90.00",
             "quantity": 11,
             "category": 11
         }
@@ -20,9 +20,9 @@
             "name": "Монитор ASUS TUF Gaming",
             "slug": "monitor-asus-tuf-gaming",
             "description": "Игровой монитор ASUS TUF Gaming VG27AQ1A основан на IPS-панели с частотой обновления 170 Гц.",
-            "image": "",
+            "image": "goods_images/0000000000-Copy-8.jpg",
             "price": "340.00",
-            "discount": "0.00",
+            "discount": "10.00",
             "quantity": 8,
             "category": 9
         }
@@ -34,25 +34,11 @@
             "name": "Кресло офисное Aceline",
             "slug": "kreslo-ofisnoe-aceline",
             "description": "Кресло офисное Aceline ACCT B обладает обивкой из текстиля и пропускающей воздух сетки.",
-            "image": "",
+            "image": "goods_images/2534.jpg",
             "price": "70.00",
             "discount": "0.00",
             "quantity": 15,
             "category": 12
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 4,
-        "fields": {
-            "name": "Чайник для плиты Tefal",
-            "slug": "chajnik-dlya-plity-tefal",
-            "description": "Чайник для плиты Tefal C7921024 позволит организовать чаепитие и порадовать себя и близких вкусным чаем.",
-            "image": "",
-            "price": "30.00",
-            "discount": "0.00",
-            "quantity": 5,
-            "category": 7
         }
     },
     {
@@ -62,9 +48,9 @@
             "name": "Смартфон Xiaomi Redmi Note 12",
             "slug": "smartfon-xiaomi-redmi-note-12",
             "description": "На 6.67-дюймовом экране смартфона Xiaomi Redmi Note 12 удобно просматривать информацию даже под прямыми солнечными лучами благодаря пиковой яркости 1200 нит и ее плавной регулировке для защиты зрения.",
-            "image": "",
+            "image": "goods_images/12.jpg",
             "price": "210.00",
-            "discount": "0.00",
+            "discount": "15.00",
             "quantity": 17,
             "category": 8
         }
@@ -76,11 +62,67 @@
             "name": "Ноутбук MSI Katana",
             "slug": "noutbuk-msi-katana",
             "description": "Ноутбук MSI Katana GF76 B12UCR-821XRU предлагает компьютерным энтузиастам высокую скорость и производительность при работе в ресурсоемких программах, запуске игр и графического контента.",
-            "image": "",
+            "image": "goods_images/nb.jpeg",
             "price": "340.00",
             "discount": "0.00",
             "quantity": 13,
             "category": 10
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 7,
+        "fields": {
+            "name": "Телевизор lg",
+            "slug": "televizor-lg",
+            "description": "пщатпопоплвоивлипавлипаггваиар",
+            "image": "",
+            "price": "56.00",
+            "discount": "0.00",
+            "quantity": 7,
+            "category": 9
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 8,
+        "fields": {
+            "name": "ТВ приставка",
+            "slug": "tv-pristavka",
+            "description": "шпашпаршапшпшарпшапрпу",
+            "image": "",
+            "price": "35.00",
+            "discount": "2.50",
+            "quantity": 7,
+            "category": 9
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 9,
+        "fields": {
+            "name": "PS 5",
+            "slug": "ps-5",
+            "description": "РИВАРПИВРОПИВАРП",
+            "image": "",
+            "price": "234.00",
+            "discount": "0.00",
+            "quantity": 8,
+            "category": 9
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 10,
+        "fields": {
+            "name": "Телевизор Sony",
+            "slug": "televizor-sony",
+            "description": "hjtjjtjtjtujtjtjtjt",
+            "image": "",
+            "price": "100.00",
+            "discount": "0.00",
+            "quantity": 9,
+            "category": 9
         }
     }
 ]
