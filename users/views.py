@@ -1,6 +1,6 @@
+import re
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth, messages
-from cProfile import Profile
 from django.contrib import auth
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
@@ -18,6 +18,11 @@ def login(request) :
             if user:
                 auth.login(request, user)
                 messages.success(request, f"{username}, Вы вошли в аккаунт")
+                
+                redirect_page = request.POST.get('next', None)
+                if redirect_page and redirect_page != reverse('user:logout'):
+                    return HttpResponseRedirect(request.POST.get('next'))
+
                 return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserLoginForm()
@@ -44,6 +49,7 @@ def registration(request) :
         'form': form
         }
     return render(request,'users/registration.html', context)
+
 @login_required
 def profile(request) : 
     if request.method == 'POST':
@@ -60,8 +66,13 @@ def profile(request) :
         }
     return render(request,'users/profile.html', context)
 
-@login_required
 
+def users_cart(request):
+    return render(request, 'users/users_cart.html')
+
+
+
+@login_required
 def logout(request):
     messages.success(request, f"{request.user.username}, Вы вышли из аккаунта")
     auth.logout(request)

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
 {% endblock css %}
 
+{% block model_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock model_cart %}
 
 {% block content %}
     <div class="mt-5 pt-5 bg-white custom-shadow rounded">
@@ -18,7 +21,7 @@
 {% block footer %}
 <footer class="py-4 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+        <p class="m-0 text-center text-white">Михайлов В.В &copy; Интернет-магазина бытовой техники</p>
     </div>
 </footer>
 {% endblock footer %}
