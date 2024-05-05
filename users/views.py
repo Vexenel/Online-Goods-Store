@@ -7,7 +7,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from carts.models import Cart
 
-from users.form import UserLoginForm, UserRegistrationForm, ProfileForm
+from users.forms import UserLoginForm, UserRegistrationForm, ProfileForm
 
 def login(request) :
     if request.method == 'POST':
