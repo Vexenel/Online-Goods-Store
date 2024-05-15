@@ -54,7 +54,7 @@
     <!-- Карта товара -->
 
     {% if request.GET.q %}
-    <h3 class="mt-4">Результаты посика по запросу {{request.GET.q}}</h3>
+    <h3 class="mt-4">Результаты поиска по запросу {{request.GET.q}}</h3>
     {% if not goods %}
         <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
         <h2 class="mt-4">По запросу ничего не найдено</h2>
@@ -67,7 +67,7 @@
                 {% if product.image  %}
                     <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">  
                 {% else %}
-                    <img src="{% static "deps/images/Not found image.png" %}" class="card-img-top" alt="...">  
+                    <img src="{% static "deps/images/Not image.png" %}" class="card-img-top" alt="...">  
                 {% endif %}
                 <div class="card-body">
                     <a href="{% url "catalog:product" product.slug %}">
@@ -94,11 +94,11 @@
                     <div class="d-flex justify-content-between">
 
                         {% if product.discount %}
-                            <p><s>{{product.price}}</s> $</p>
-                            <p><strong>{{product.sell_price}} $</strong></p>
+                            <p><s>{{product.price}}</s> ₽</p>
+                            <p><strong>{{product.sell_price}} ₽</strong></p>
                             <span class="badge bg-warning text-dark">{{product.discount}}%</span>
                         {% else %}
-                            <p><strong>{{ product.price }}</strong></p>
+                            <p><strong>{{ product.price }} ₽</strong></p>
                         {% endif %}
 
                         <a href="{% url "cart:cart_add" %}" class="btn add-to-cart"

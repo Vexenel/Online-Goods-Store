@@ -30,7 +30,7 @@ class Products(models.Model):
         verbose_name_plural: str =  'Продукты'
         ordering = ("id", )
 
-    def __str__(self) -> str:
+    def str(self) -> str:
         return f'{self.name} Количество - {self.quantity}'
     
     def get_absolute_url(self):
@@ -41,6 +41,6 @@ class Products(models.Model):
     
     def sell_price(self):
         if self.discount:
-            return round(self.price - self.price*self.discount/100, 2)
+            return round(self.price - self.price * self.discount / 100, 2)
         
         return self.price

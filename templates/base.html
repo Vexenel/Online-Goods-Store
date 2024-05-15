@@ -1,4 +1,4 @@
-{% load static %} 
+ {% load static %} 
 {% load goods_tags %}
 
 
@@ -15,116 +15,112 @@
     {% block css  %}
     {% endblock css  %}
     <!-- Favicons for different platforms -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static "deps/favicon/apple-touch-icon.png" %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static "deps/favicon/favicon-32x32.png" %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static "deps/favicon/favicon-16x16.png" %}">
+    <link rel="" sizes="180x180" href="{% static "deps/favicon/" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "deps/favicon/priv.png" %}">
+    <link rel="" type="image/png" sizes="16x16" href="{% static "deps/favicon/" %}">
     <link rel="manifest" href="{% static "deps/favicon/site.webmanifest" %}">
     <title>{{ title }}</title>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container">
-                <a class="navbar-brand" href="{% url "main:index" %}">Главный экран</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Информация
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="{% url "main:deli" %}">Доставка и оплата</a></li>
-                                <li><a class="dropdown-item  text-white" href="{% url "main:cont" %}">Контактная информация</a></li>
-                                <li><a class="dropdown-item  text-white" href="{% url "main:about" %}">Про нас</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  text-white" href="{% url "user:users_cart" %}">Корзина</a>
-                        </li>
-                        {% if not user.is_authenticated %}
-                            <li class="nav-item">
-                                <a class="nav-link  text-white" href="{% url "user:login" %}">Войти</a>
-                            </li>
-                        {% else %}
-                            <li class="nav-item dropdown ">
-                                <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Мой профиль
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
-                                    <li><a class="dropdown-item  text-white" href="{% url "user:profile" %}">Личный кабинет</a>
-                                    </li>
-                                    {% if user.is_admin or user.is_staff %}
-                                        <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Админ панель</a></li>
-                                    {% endif %}
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item  text-white" href="{% url "user:logout" %}">Выйти</a></li>
-                                </ul>
-                            </li>
-                        {% endif %}
-                    </ul>
-                    <form class="d-flex" role="search" action = "{% url "catalog:search" %}" method="get">
-                        <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white" type="submit">Найти</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section>
+<header class="d-flex justify-content-center bg-dark">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <a class="navbar-brand text-center"></a>
         <div class="container">
-            <!-- Каталог и корзина с фиксированным расположением на странице -->
-            <div class="row mt-1 position-fixed z-3">
-                <!-- Каталог -->
-                <div class="dropdown mb-2">
-                    <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0"></ul>
+                <form class="d-flex" role="search" action="{% url "catalog:search" %}" method="get">
+                    <input class="form-control me-2" style="width: 350px;" type="search" name="q" placeholder="Поиск товаров" aria-label="Search">
+                    <button class="btn btn-outline-success text-white border border-white" type="submit">Найти</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<header>
+    <nav>
+        <div class="d-flex justify-content-center bg-dark"
+            style="position: fixed; bottom: 0; left: 0; height: 100vh; width: 240px;" data-bs-theme="dark">
+
+            <img src="{% static "deps/favicon/logoaz.png" %}" alt="" style="width: 100%; height: 27vh; object-fit: cover;">
+            <div class="vr"></div>
+            <!-- Пустой блок на Ваше усмотрение -->
+            <ul class="nav flex-column" style="position: absolute; top: 30vh;">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url "main:index" %}">Главный экран</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Каталог
-                        <img class="mx-1" src="{% static "deps/icons/grid-fill.svg" %}" alt="Catalog Icon" width="16"
-                            height="16">
-                    </button>
-                    <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                    </a>
+                    <ul class="dropdown-menu">
                         {% tag_Categories as categories %}
                         {% for category in categories  %}
                             <li><a class="dropdown-item text-white" href="{% url "catalog:index" category.slug %}">{{category.name}}</a></li>
-                        {% endfor categories %}
-
-                </div>
-                <!-- Значек корзины, вызывает модальное окно -->
-                {% block model_cart %}{% endblock  %}
-                <!-- Закончилась разметка модального окна -->
-            </div>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Информация
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li><a class="dropdown-item text-white" href="{% url "main:deli" %}">Доставка и оплата</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "main:cont" %}">Контактная информация</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url "main:about" %}">Про нас</a></li>
+                    </ul>
+                </li>
+                {% if not user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link text-white" href="{% url "user:login" %}">Войти</a></li>
+                {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Мой профиль
+                        </a>
+                        <ul class="dropdown-menu bg-dark"><li><a class="dropdown-item text-white" href="{% url "user:profile" %}">Личный кабинет</a></li>
+                            <li><a class="dropdown-item text-white" href="{% url "user:users_cart" %}">Корзина</a></li>
+                            {% if user.is_admin or user.is_staff %}
+                                <li><a class="dropdown-item text-white" href="{% url "admin:index" %}">Админ панель</a></li>
+                            {% endif %}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-white" href="{% url "user:logout" %}">Выйти</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+                {% block model_cart %}{% endblock %}
+            </ul>
         </div>
+    </nav>
+</header>
         <!-- Контент -->
-        <div class="container">
-            <div class="row mt-1">
-                <div class="col-lg-2">
-                    <!-- Пустой блок на Ваше усмотрение -->
-                </div>
-                <div class="col-lg-10">
-                    <!-- Контент на странице -->
-                    {% include "includes/notifications.html" %}
-                    {% block content %}{% endblock content %}
-
-                </div>
-            </div>
+<div class="container">
+    <div class="row mt-1">
+        <div class="col-lg-2">
+            <!-- Пустой блок на Ваше усмотрение -->
         </div>
-    </section>
+        <div class="col-lg-10">
+            <!-- Контент на странице -->
+            {% include "includes/notifications.html" %}
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+</div>
     {% block footer %}
     {% endblock footer %}
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
     <script src="{% static "deps/js/bootstrap/bootstrap.bundle.min.js" %}"></script>
-</body>
+    <script>
+        $(document).ready(function() {
+            $('.carousel-control-next').click(function() {
+                $('#myCarousel').carousel('next');
+            });
+        
+            $('.carousel-control-prev').click(function() {
+                $('#myCarousel').carousel('prev');
+            });
+        });
+        </script>
 
-</html>
+    </body>
+    </html>
